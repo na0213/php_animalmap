@@ -1,0 +1,200 @@
+.back {
+    width: 100%;
+    display: flex;
+}
+.container {
+    position: relative;
+    background: #fff5e9;
+    height: 30vh;
+    width: 50%;
+}
+.circlet {
+    padding-top: 20px;
+}
+.circle-2 {
+  color: #8e6123;
+  padding: 5%;
+  width: 60px;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 30px;
+  mix-blend-mode: multiply;
+  background: #FFE5C0;
+  border-radius: 70% 30% 50% 50%/50%;
+}
+.circle {
+    width: 80px;
+    /* margin-left: 20px; */
+}
+.container2 {
+    position: relative;
+    background: #eee7e0;
+    height: 80vh;
+    width: 50%;
+}
+.question {
+    width: 100px;
+    height: 50px;
+    /* background-color: red; */
+    /* 水平・垂直方向の中央揃え */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.wave {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #fff5e9;
+    bottom: 0;
+}
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #fff5e9;
+    left: -1.5%;
+    top: 40%;
+}
+.wave2 {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #eee7e0;
+    bottom: 0;
+}
+.wave2::before, .wave2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave2::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave2::after {
+    width: 55%;
+    height: 100%;
+    background-color: #eee7e0;
+    left: -1.5%;
+    top: 40%;
+}
+
+.qa {
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+}
+.qa1 {
+    width: 30%;
+}
+.qa3 {
+    width: 30%;
+}
+#formWrap{
+    width: 100%;
+}
+.form_inner{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #FFF;
+    min-width: 768px;
+    padding: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    -webkit-border-radius:20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px; 
+}
+.form_inner h3{
+    font-size: 24px;
+    color: #00a0e9;
+    border-bottom: 1px solid #00a0e9;
+    padding-left: 6.25px;
+    padding-bottom: 12.5px;
+    margin-bottom: 50px;
+}
+.form_inner p{
+    margin: 25px 0;
+}
+
+.form_inner p a{
+    color: #00a0e9;
+}
+#formWrap {
+  width:800px;
+  margin:0 auto;
+  color:#555;
+  line-height:150%;
+  font-size:85%;
+}
+table.formTable{
+  width:100%;
+  margin:0 auto;
+  border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+  border:1px solid #ccc;
+  padding:12.5px;
+}
+table.formTable th{
+  widows: 40%;
+  font-weight:normal;
+  background:#efefef;
+  text-align:right;
+}
+input,textarea{
+    padding: 6.25px 12.5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCCCCC;
+}
+.form_require {
+    color: #ED1E79;
+    font-size: 12px;
+}
+
+a.btn_11 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+	border-radius: 100vh;
+	color: #333;
+	border: 1px solid #999;
+	text-shadow: 0 1px #fff;
+	box-shadow: 0 3px 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
+	transition: 0.5s;
+}
+a.btn_11:hover {
+	opacity: 0.5;
+}
+
+      
