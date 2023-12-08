@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/map.css">
+
+
+</head>
+<body>
+    <div class="box-wrapper">
+        <div class="back">
+            <section class="container">
+                <div class="circlet">
+                    <a href="top.html" style="text-decoration: none;">
+                    <div class="circle-2">
+                        <p class="circle">いろいろ<br>どうぶつ</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="wave">
+                </div>
+            </section>
+            <section class="container">
+                <div class="question">
+
+                </div>
+                <div class="wave">
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="map-center">
+        <div id="sample"></div>
+    </div>
+
+<script>
+var map;
+var marker = [];
+var infoWindow = [];
+var markerData = [ // マーカーを立てる場所名・緯度・経度
+  {
+       name: 'ピースワンコ・ジャパン湘南譲渡センター',
+       lat: 35.33487352642083,
+        lng: 139.4641565317658,
+        url: 'https://peace-wanko.jp/facility/shonan.html',
+ }, {
+        name: '横浜市動物愛護センター',
+        lat: 35.49482006550106,
+        lng: 139.5703147556886,
+        url: 'https://twitter.com/yokohama_douai',
+ }, {
+        name: '神奈川県動物愛護センター',
+        lat: 35.35351743057726,
+        lng: 139.25397946732585,
+        url: 'https://www.pref.kanagawa.jp/osirase/1594/awc/',
+ }, {
+        name: '川崎市動物愛護センター ANIMAMALL',
+        lat: 35.556389325415374,
+        lng: 139.67415833849844,
+        url: 'https://www.city.kawasaki.jp/shisetsu/category/39-2-0-0-0-0-0-0-0-0.html',
+ }, {
+        name: 'アニマルハートレスキュー',
+        lat: 35.544335015026334,
+        lng: 139.56956268267652,
+        url: 'http://www.animal-heart-rescue.net/',
+ }
+];
+ 
+function initMap() {
+    // 地図の作成
+    var mapLatLng = new google.maps.LatLng({lat: markerData[0]['lat'], lng: markerData[0]['lng']});
+    map = new google.maps.Map(document.getElementById('sample'), {
+        center: mapLatLng,
+        zoom: 10
+    });
+
+    // マーカー毎の処理
+    for (var i = 0; i < markerData.length; i++) {
+        var markerLatLng = new google.maps.LatLng({lat: markerData[i]['lat'], lng: markerData[i]['lng']});
+        marker[i] = new google.maps.Marker({
+            position: markerLatLng,
+            map: map
+        });
+
+        var infoWindowContent = '<div class="sample">' +
+            '<h3>' + markerData[i]['name'] + '</h3>' +
+            '<p><a href="' + markerData[i]['url'] + '">詳細情報</a></p>' +
+            '</div>';
+
+        infoWindow[i] = new google.maps.InfoWindow({
+            content: infoWindowContent
+        });
+
+        markerEvent(i);
+    }
+    
+    marker[0].setOptions({// TAM 東京のマーカーのオプション設定
+            icon: {
+            url: markerData[0]['icon']// マーカーの画像を変更
+        }
+    });
+    }
+    
+    // マーカーにクリックイベントを追加
+    function markerEvent(i) {
+        marker[i].addListener('click', function() { // マーカーをクリックしたとき
+        infoWindow[i].open(map, marker[i]); // 吹き出しの表示
+    });
+    }
+</script>
+</body>
+</html>

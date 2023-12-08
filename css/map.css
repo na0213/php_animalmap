@@ -1,0 +1,106 @@
+.back {
+    width: 100%;
+    display: flex;
+}
+.container {
+    position: relative;
+    background: #fff5e9;
+    height: 30vh;
+    width: 50%;
+}
+.circlet {
+    padding-top: 20px;
+}
+.circle-2 {
+  color: #8e6123;
+  padding: 5%;
+  width: 60px;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 30px;
+  mix-blend-mode: multiply;
+  background: #FFE5C0;
+  border-radius: 70% 30% 50% 50%/50%;
+}
+.circle {
+    width: 80px;
+    /* margin-left: 20px; */
+}
+.container2 {
+    position: relative;
+    background: #eee7e0;
+    height: 80vh;
+    width: 50%;
+}
+.question {
+    width: 100px;
+    height: 50px;
+    /* background-color: red; */
+    /* 水平・垂直方向の中央揃え */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.wave {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #fff5e9;
+    bottom: 0;
+}
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #fff5e9;
+    left: -1.5%;
+    top: 40%;
+}
+.wave2 {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #eee7e0;
+    bottom: 0;
+}
+.wave2::before, .wave2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave2::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave2::after {
+    width: 55%;
+    height: 100%;
+    background-color: #eee7e0;
+    left: -1.5%;
+    top: 40%;
+}
+.map-center {
+    display: flex;
+    justify-content: center;
+}
+#sample {
+    width: 800px;
+    height: 600px;
+}

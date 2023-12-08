@@ -1,0 +1,239 @@
+.back {
+    width: 100%;
+    display: flex;
+}
+.container {
+    position: relative;
+    background: #EAD2DF;
+    height: 30vh;
+    width: 50%;
+}
+.circlet {
+    padding-top: 20px;
+}
+.circle-2 {
+  color: #8e6123;
+  font-weight: bold;
+  padding: 5%;
+  width: 70px;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 30px;
+  mix-blend-mode: multiply;
+  background: #FFE5C0;
+  border-radius: 70% 30% 50% 50%/50%;
+}
+.circle1 {
+    width: 80px;
+    /* margin-left: 20px; */
+}
+.container2 {
+    position: relative;
+    background: #EAD2DF;
+    height: 80vh;
+    width: 50%;
+}
+.question {
+    width: 100px;
+    height: 50px;
+    /* background-color: red; */
+    /* 水平・垂直方向の中央揃え */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.wave {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #EAD2DF;
+    bottom: 0;
+}
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #EAD2DF;
+    left: -1.5%;
+    top: 40%;
+}
+.wave2 {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    background: #eee7e0;
+    bottom: 0;
+}
+.wave2::before, .wave2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+.wave2::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+.wave2::after {
+    width: 55%;
+    height: 100%;
+    background-color: #eee7e0;
+    left: -1.5%;
+    top: 40%;
+}
+
+.comment {
+    position: relative;
+}
+.thanks {
+    width: 250px;
+    height: 50px;
+    /* 水平・垂直方向の中央揃え */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    color: #8e6123;
+    letter-spacing: 1rem;
+    font-size:large;
+    font-weight: bold;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.answer{
+    margin-top: 100px;
+    color: #8e6123;
+}
+.message {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.gender-table {
+    background-color: #fff;
+}
+td, th {
+    border: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    line-height: 1.5em;
+}
+.kurukuru {
+    padding: 50px;
+  }
+  .blockk {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+  }
+  .circleText {
+    overflow: visible;
+    animation: rotation 18s linear infinite;
+  }
+  .circleText .circleText__circle {
+    fill: none;
+  }
+  .circleText .circleText__text {
+    fill: #b3ada8;
+    font-size: 10px;
+    letter-spacing: 0.5em;
+  }
+
+  .chart-wrap {
+    margin:  0;
+    padding:  0;
+    list-style: none;
+    position: relative;
+    width: 320px;
+    height:  200px;
+}
+.point {
+    color: #F44336;
+}
+.bar {
+    width:  20px;
+    background-color:  #000;
+    margin:  0 auto;
+    transition: 0.5s;
+    height:  0;
+}
+
+.chart li {
+    display:  inline-block;
+    width:  100px;
+    text-align:  center;
+    vertical-align:  bottom;
+}
+
+.chart-wrap::before {
+    content: '';
+    height: calc(100% - 24px);
+    width:  1px;
+    background-color:  #000;
+    position:  absolute;
+    left:  0;
+    bottom: 24px;
+}
+
+.chart-wrap::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color:  #000;
+    position:  absolute;
+    left:  0;
+    bottom: 24px;
+}
+
+.chart li:nth-child(1) .bar {
+    background-color: #F44336;
+}
+
+.chart li:nth-child(2) .bar {
+    background-color: #2196F3;
+}
+
+.chart li:nth-child(3) .bar {
+    background-color: #009688;
+}
+
+ul.chart {
+    margin:  0;
+    padding:  0;
+    list-style:  none;
+    position:  absolute;
+    bottom:  0;
+}
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
+      
